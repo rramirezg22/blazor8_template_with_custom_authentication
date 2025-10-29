@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using System.Security.Claims
+
+<AuthorizeView>
+
+  <Authorized>
+    <NavLink class="nav-link" href="logout">
+      <span class="bi bi-door-nav-menu" aria-hidden="true"></span>
+    </NavLink>
+    <span style="color: darkblue;">
+      [@context.User.Identity.Name]
+    </span>
+  </Authorized>
+
+  <NotAuthorized>
+    <NavLink class="nav-link" href="login">
+      <span class="bi bi-person-nav-menu" aria-hidden="true"></span>
+    </NavLink>
+  </NotAuthorized>
+
+</AuthorizeView>
