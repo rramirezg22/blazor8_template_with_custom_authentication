@@ -1,0 +1,36 @@
+﻿.tooltip-wrapper {
+	position: relative;
+	display: inline-block;
+	cursor:pointer;
+}
+
+span {
+	visibility: hidden;
+	position: absolute;
+	width: 60px;
+	bottom: 80%;
+	left: 90%;
+	margin-left: -60px;
+	background-color: darkblue;
+	color: #fff;
+	font-size:xx-small;
+	text-align: center;
+	padding: 1px 0;
+	border-radius: 1px;
+	z-index: 1;
+}
+
+	span::after {
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -5px;
+		border-width: 5px;
+		border-style: solid;
+		border-color: #555 transparent transparent transparent;
+	}
+
+.tooltip-wrapper:hover span {
+	visibility: visible;
+}

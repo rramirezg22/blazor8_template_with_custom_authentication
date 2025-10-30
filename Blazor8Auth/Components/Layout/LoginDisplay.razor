@@ -1,21 +1,24 @@
 ﻿@using Microsoft.AspNetCore.Components.Authorization
-@using System.Security.Claims
 
 <AuthorizeView>
 
   <Authorized>
-    <NavLink class="nav-link" href="logout">
-      <span class="bi bi-door-nav-menu" aria-hidden="true"></span>
-    </NavLink>
-    <span style="color: darkblue;">
+    <Blazor8Auth.Components.UI.Tooltip Text="logout">
+      <NavLink class="nav-link" href="logout">
+        <span class="bi bi-door-nav-menux" aria-hidden="true"></span>
+      </NavLink>
+    </Blazor8Auth.Components.UI.Tooltip>
+    <span style="color: darkblue; font-size:small; font-weight: bold;">
       [@context.User.Identity.Name]
     </span>
   </Authorized>
 
   <NotAuthorized>
-    <NavLink class="nav-link" href="login">
-      <span class="bi bi-person-nav-menu" aria-hidden="true"></span>
-    </NavLink>
+    <Blazor8Auth.Components.UI.Tooltip Text="login">
+      <NavLink class="nav-link" href="login">
+        <span class="bi bi-person-nav-menu" aria-hidden="true"></span>
+      </NavLink>
+    </Blazor8Auth.Components.UI.Tooltip>
   </NotAuthorized>
 
 </AuthorizeView>
