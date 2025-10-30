@@ -7,17 +7,19 @@
 span {
 	visibility: hidden;
 	position: absolute;
-	width: 60px;
-	bottom: 80%;
-	left: 90%;
+	width: 70px;
+	/* bottom: 80%;
 	margin-left: -60px;
+	 */
 	background-color: darkblue;
 	color: #fff;
-	font-size:xx-small;
+	font-size: xx-small;
 	text-align: center;
-	padding: 1px 0;
+	padding: 2px 0;
 	border-radius: 1px;
 	z-index: 1;
+	left: 10%;
+	top: -28%; /* Adjust this value to control distance from the trigger element */
 }
 
 	span::after {
@@ -28,7 +30,7 @@ span {
 		margin-left: -5px;
 		border-width: 5px;
 		border-style: solid;
-		border-color: #555 transparent transparent transparent;
+		border-color: darkblue transparent transparent transparent;
 	}
 
 .tooltip-wrapper:hover span {
