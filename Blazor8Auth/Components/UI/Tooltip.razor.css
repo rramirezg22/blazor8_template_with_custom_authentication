@@ -19,7 +19,7 @@ span {
 	border-radius: 1px;
 	z-index: 1;
 	left: 10%;
-	top: -28%; /* Adjust this value to control distance from the trigger element */
+	top: -35%; /* Adjust this value to control distance from the trigger element */
 }
 
 	span::after {
