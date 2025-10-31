@@ -3,14 +3,14 @@
 <AuthorizeView>
 
   <Authorized>
+    <span style="color: darkblue; font-size:small; font-weight: bold;margin-bottom: 0.7rem;">
+      [ @context.User.Identity.Name ]
+    </span>
     <Blazor8Auth.Components.UI.Tooltip Text="Logout">
       <NavLink class="nav-link" href="logout">
         <span class="bi bi-door-nav-menux" aria-hidden="true"></span>
       </NavLink>
     </Blazor8Auth.Components.UI.Tooltip>
-    <span style="color: darkblue; font-size:small; font-weight: bold;">
-      [@context.User.Identity.Name]
-    </span>
   </Authorized>
 
   <NotAuthorized>
